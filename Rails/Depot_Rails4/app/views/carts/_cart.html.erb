@@ -1,0 +1,15 @@
+<% unless @cart.line_items.empty? %>
+<div class="cart_title">你的购物车</div>
+<table>
+  <%= render(cart.line_items) %>
+
+  <tr class="total_line">
+    <td colspan="3">Total</td>
+    <td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+  </tr>
+</table>
+
+<%= button_to '清空购物车', cart, method: :delete,
+    data: { confirm: '确定要清空购物车？' } %>
+<%= button_to '去结账', new_order_path, method: :get %>
+<% end %>

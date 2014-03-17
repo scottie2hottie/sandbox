@@ -1,0 +1,1 @@
+使用 Friendly_id 5.x 版本，rails 4.x 版本，参照 railscasts 代码，部分做修改，以匹配 rails 4.

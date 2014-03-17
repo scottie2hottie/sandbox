@@ -1,0 +1,13 @@
+<h1>最近的博文</h1>
+
+<% @posts.each do |post| %>
+  <div class="posts">
+    <%= render partial: post %>
+    <p>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+  </div>
+<% end %>
+
+<%= link_to 'New Post', new_post_path %>

@@ -1,0 +1,1 @@
+根据 Learning Rails in 7 days by xdite 做的练习

@@ -1,0 +1,32 @@
+.stock_hqblock{width:320px;margin:0 auto;overflow;hidden;padding-top:10px;}
+.stock_hqblock .stock_hqimg{float:left;width:233px;height:125px}
+.stock_hqblock .stock_hqimg .stock_img{margin-left:10px}
+.stock_hqblock .stock_hqbtn{float:left;width:78px;height:96px;padding-top:17px}
+.stock_hqblock ul{margin:0;padding:0;list-style-type:none}
+.stock_hqblock .stock_hqbtn li{background:url(../images/caijinggupiaobeijingtu.png) no-repeat 0 -59px;height:37px;text-align:center;font-size:12px;cursor:pointer;padding-left:4px}
+.stock_hqblock .stock_hqbtn li h2{margin:0;padding:0;font:400 18px/35px Microsoft YaHei; font-family:Microsoft YaHei;color:#003D90;letter-spacing:5px;padding-left:2px}
+.stock_hqblock .stock_hqbtn li.stock_current{background-position:0 0;height:60px;overflow:hidden}
+.stock_hqblock .stock_hqbtn li.stock_current h2{line-height:1.2;color:#333}
+.stock_hqblock .stock_hqbtn li.stock_current .stock_con{line-height:1.4;padding:4px 0 0}
+.stock_hqblock .stock_hqbtn li.stock_current .stock_sub{display:block}
+.stock_hqblock .stock_hqbtn li .stock_sub{display:none}
+.stock_hqblock .stock_hqbtn span{display:block}
+.stock_red{color:#f00}
+.stock_green{color:#080}
+.stock_mygupiao{clear:both;font-size:12px;padding:12px 0 10px 10px;margin:0 auto;}
+.stock_mygupiao ul{height:30px; background:url(../images/e/bg01.png) no-repeat;list-style-type:none;margin:0;padding:0;}
+.stock_mygupiao li{float:left}
+.stock_mygupiao li.stock_s1{width:165px}.stock_mygupiao li.stock_s2{width:70px}
+.stock_mygupiao .stock_kw{width:100%;height:18px;margin:7px 0 0 5px;border:none;background:#fff;font:400 14px/1.2 Microsoft YaHei;color:#999}
+.stock_mygupiao .stock_seabtn{width:63px;height:30px;cursor:pointer;display:block}
+.stock_mygupiao .stock_seabtn,.stock_mygupiao .stock_s3{font-size:16px;font-family:Microsoft YaHei}
+.stock_mygupiao .stock_s3{line-height:30px}
+.stock_mygupiao a:link,.stock_mygupiao a:visited{color:#333;text-decoration:none}
+.stock_mygupiao a:hover{text-decoration:none}
+
+.stock_mygupiao ul{background:none;}
+.stock_mygupiao form{margin:0;padding:0;display:inline;}
+.stock_mygupiao li.stock_s1 {width:100%;margin-right:-150px;}
+.stock_mygupiao .stock_txt{display:block;margin-right:165px;}
+.stock_mygupiao .stock_kw{margin:0;border:1px solid #D6D6D6;padding:5px 4px 7px;border-radius:3px;color:#666;box-shadow:0px 2px 5px #eee inset;}
+.stock_mygupiao .stock_seabtn{border:1px solid #D6D6D6;padding:4px 4px;border-radius:3px;color:#666;box-shadow:0px 1px 1px #fff inset;background:-webkit-gradient(linear,0 0, 0 100%,from(#F7F7F7),to(#ECECEC));-webkit-tap-highlight-color:rgba(0,0,0,0);width:52px;height:22px;}

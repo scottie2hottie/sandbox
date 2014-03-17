@@ -1,0 +1,148 @@
+<html>
+<!--head-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width"/>
+<meta name="MobileOptimized" content="320"/>
+<meta name="copyright" content="歪酷CMS" />
+<meta name="author" content="歪酷CMS 将军" />
+<link rel="apple-touch-icon-precomposed" href="__THEME__/images/logo-icon.png" >
+<title><wk:tplvar name='wap_name'/></title>
+<link rel="stylesheet" type="text/css" href="__THEME__/css/chupingyangshi_home.css" media="all">
+<link rel="stylesheet" type="text/css" href="__THEME__/css/bookmark.css"/>
+<script type="text/javascript" src="__THEME__/js/touchslider.js"></script>
+<script type="text/javascript" src="__THEME__/js/jCore-min.js"></script>
+<script type="text/javascript" src="__THEME__/js/jCommon-min.js?v=15"></script>
+</head>
+<!--head-->
+<body class="home">
+<!--顶部logo+天气-->
+<header>
+<h1 class="logo" style="color:white;font-weight:bold;"><wk:tplvar name='wap_name'/></h1>
+<div class="weather_min" id="weather_tip">
+<p>
+北京时间<br>{:date('H:i')}
+</p>
+</div>
+</header>
+<!--顶部logo+天气-->
+
+<!--顶部导航栏-->
+<nav class="site all">
+<div>
+<a href="__ROOT__">首页</a>
+<wk:arctype type='top' row='10'>
+<a href="<field name='typeurl'/>"><field name='typename'/></a>
+</wk:arctype>
+</div>
+</nav>
+
+				<!--搜索框+广告-->
+<section class="sch">
+		<div class="form">
+			<form action="__SEARCH__" name='myform'>
+				<div class="redi">
+					<a sid="show_name" href="javascript:void(0);" class="engin cur">站内</a>
+					<div sid="search_div" class="sets noDis">
+						<a sid="index_btn" href="javascript:void(0);" class="engin">站内</a>
+					</div>
+				</div>
+				<i class="txt"><input name="keyword" type="text" ></i>
+				<input sid="submit" type="submit" value="搜索" class="btn btn1">
+			</form>
+
+</div>
+</section>
+<section class="cnl">
+<h3 class="h ht1">
+<em>热点内容</em>
+</h3>
+
+
+<section class="ls">
+<wk:arclist flag='h' limit='0,1'>
+<div class="it">
+<div class="h4WP">
+<a href="<field name='arcurl'/>"    class="h4" >
+<span style='color:rgb(194, 0, 0)'><field name='title'/></span>
+</a>
+</div>
+</div>
+</wk:arclist>
+<wk:arclist flag='h' limit='1,2'>
+<div class="it">
+<div class="h4WP">
+<a href="<field name='arcurl'/>" class="h4" ><field name='title'/></a>
+</div>
+</div>
+</wk:arclist>
+</section>
+</section>
+
+
+
+
+<!-- tips -->
+<section class="tips">
+<div class="wrapper">
+			<div id="slider">
+				<ul style="width:960px;">
+				<wk:arclist flag='p' row='5'>
+<li <eq name='i' value='1'>style='display:block'<else/>style='display:none'</eq>>
+    <a href="<field name='arcurl'/>"><img src="<field name='litpic' function="empty(@me) ? '__PUBLIC__/Admin/images/nopic.png':@me "/>" width="320px" height="158px"/><br/><center><field name='title'/></center></a>
+</li>
+</wk:arclist>			
+				</ul>
+	<div class="page-wrapper" style="padding-bottom:10px;"> <a class="page-prev" onclick="slider.prev();return false;">
+	<img src="__THEME__/images/pic_prev_open.png" loaded="1" width="11"></a> 
+	<a class="page-next" onclick="slider.next();return false;">
+	<img src="__THEME__/images/pic_next.png" loaded="1" width="11"></a> 
+	</div>
+				</div>
+		</div>
+</section>
+
+<script>
+var slider =new TouchSlider({id:'slider',direction:'right',auto:2,mouseWheel:true});
+</script>
+
+
+
+<!-- 主栏目区域 -->
+<wk:arctype type='top' vo='vo'>
+<section class="cnl">
+<h3 class="h ht1">
+<aside>
+<menu class="sep">
+<wk:arctype typeid='~typeid~'>
+<li><a href="<field name='typeurl'/>"><field name='typename'/></a></li>
+</wk:arctype>
+</menu>
+</aside>
+<em><a href="<field name='typeurl' fromvo='vo'/>"><field name='typename' fromvo='vo'/></a></em>
+</h3>
+<div class="it">
+<section class="pl pl_c2">
+<wk:arclist typeid='~typeid~' fromvo='vo' limit='0,2'>
+<a href="<field name='arcurl'/>" class="h4">
+<i class="img"><img src="<field name='litpic' function="empty(@me) ? '__PUBLIC__/Admin/images/nopic.png':@me "/>"  width="146" height="124" /></i>
+<p><field name='title'/></p>
+</a>
+</wk:arclist>
+</section>
+</div>
+<section class="ls">
+<wk:arclist typeid='~typeid~' fromvo='vo' limit='2,6'>
+<div class="it">
+<div class="h4WP">
+<a href="<field name='arcurl'/>" class="h4"><field name='title'/></a>
+</div>
+</div>
+</wk:arclist>
+</section>
+</section>
+</wk:arctype>
+<wk:include filename='footer.htm'/>
+</body>
+</html>

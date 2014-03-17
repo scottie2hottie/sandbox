@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tasker</title>
+    <link rel='stylesheet' type="text/css" href='styles.css'/>
+    <script src="jquery.min.js"></script>
+    <script src="application.js"></script>
+  </head>
+
+  <body>
+    <h1>JSTasker</h1>
+    <form id='add_task'>
+      <fieldset>
+        <legend>Add a Task</legend>
+        <input type='text' name='task_text' id='task_text' />
+        <select name="task_category" id="task_category">
+            <!-- <option value="0">Please select a category</option> -->
+            <option value="1">Personal tasks</option>
+            <option value="2">Work tasks</option>
+        </select>
+        <input type='submit' name='add_button' value='Add' />
+      </fieldset>
+    </form>
+
+    <div id='work_tasks'>
+      <h2>
+        Work Tasks
+        <span id='task_counter'></span>
+        <span id="check">
+          <a href="#" id="check_all">Check All</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#" id="uncheck_all">Uncheck All</a>
+        </span>
+      </h2>
+      <ul id='task_list'>
+      </ul>
+    </div>
+
+    <div id='personal_tasks'>
+      <h2>
+        Personal Tasks
+        <span id='task_counter'></span>
+        <span id="check">
+          <a href="#" id="check_all">Check All</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="#" id="uncheck_all">Uncheck All</a>
+        </span>
+      </h2>
+      <ul id='task_list'>
+      </ul>
+    </div>
+
+
+  </body>
+</html>

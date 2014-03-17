@@ -1,0 +1,1 @@
+按照 http://tutorials.jumpstartlab.com/projects/javascript/jquery/jstasker.html 做的练习。

@@ -1,0 +1,1 @@
+Just a demo_app in the process of learning from Michael Hartl

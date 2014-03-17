@@ -1,0 +1,265 @@
+DROP TABLE IF EXISTS `#@__ad`;
+CREATE TABLE IF NOT EXISTS `#@__ad` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `title` char(50) DEFAULT NULL,
+  `content` text,
+  `pubdate` int(10) DEFAULT NULL,
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `gid` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `gid` (`gid`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__addonarticle`;
+CREATE TABLE IF NOT EXISTS `#@__addonarticle` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `typeid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `body` mediumtext,
+  `redirecturl` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `typeid` (`typeid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `#@__admin`;
+CREATE TABLE IF NOT EXISTS `#@__admin` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `name` char(15) NOT NULL,
+  `password` char(32) NOT NULL,
+  `logintime` int(10) unsigned NOT NULL,
+  `loginip` char(15) NOT NULL,
+  `status` enum('正常','禁止','超级') NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__ad_group`;
+CREATE TABLE IF NOT EXISTS `#@__ad_group` (
+  `id` smallint(5) unsigned NOT NULL,
+  `name` char(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `name` (`name`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__archive`;
+CREATE TABLE IF NOT EXISTS `#@__archive` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `typeid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `flag` set('c','h','p','f','s','j','a','b') DEFAULT NULL,
+  `modelid` smallint(6) NOT NULL DEFAULT '1',
+  `arcrank` smallint(6) NOT NULL DEFAULT '0',
+  `click` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `money` smallint(6) NOT NULL DEFAULT '0',
+  `title` char(60) NOT NULL,
+  `shorttitle` char(36) NOT NULL,
+  `color` char(7) NOT NULL,
+  `writer` char(20) NOT NULL,
+  `source` char(30) NOT NULL,
+  `litpic` char(100) NOT NULL,
+  `pubdate` int(10) unsigned NOT NULL DEFAULT '0',
+  `senddate` int(10) unsigned NOT NULL DEFAULT '0',
+  `mid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `keywords` char(30) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `voteid` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `mainindex` (`arcrank`,`typeid`,`modelid`,`flag`,`mid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+DROP TABLE IF EXISTS `#@__arcmodel`;
+CREATE TABLE IF NOT EXISTS `#@__arcmodel` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `nid` varchar(20) NOT NULL,
+  `typename` varchar(20) NOT NULL,
+  `titlename` varchar(20) NOT NULL,
+  `fieldset` text NOT NULL,
+  `addtable` char(30) NOT NULL,
+  `issystem` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__arctiny`;
+CREATE TABLE IF NOT EXISTS `#@__arctiny` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `typeid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `modelid` smallint(5) NOT NULL DEFAULT '1',
+  `senddate` int(10) unsigned NOT NULL,
+  `mid` mediumint(8) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__arctype`;
+CREATE TABLE IF NOT EXISTS `#@__arctype` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `modelid` smallint(5) unsigned NOT NULL DEFAULT '1',
+  `modeltype` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `linkurl` varchar(255) NOT NULL,
+  `typename` char(30) NOT NULL,
+  `seotitle` varchar(30) NOT NULL,
+  `keywords` char(30) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `content` text NOT NULL COMMENT '栏目内容',
+  `sortrank` smallint(5) unsigned NOT NULL,
+  `fid` smallint(11) unsigned NOT NULL,
+  `path` char(10) NOT NULL DEFAULT '0',
+  `tempindex` char(50) NOT NULL,
+  `templist` char(50) NOT NULL,
+  `temparticle` char(50) NOT NULL,
+  `waptempindex` char(50) NOT NULL,
+  `waptemplist` char(50) NOT NULL,
+  `waptemparticle` char(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `modelid` (`modelid`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__articlelink`;
+CREATE TABLE IF NOT EXISTS `#@__articlelink` (
+  `id` mediumint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(40) NOT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `rank` tinyint(2) unsigned NOT NULL,
+  `num` tinyint(2) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__config`;
+CREATE TABLE IF NOT EXISTS `#@__config` (
+  `id` smallint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `varname` varchar(30) NOT NULL,
+  `info` varchar(100) NOT NULL DEFAULT '',
+  `groupid` smallint(6) NOT NULL DEFAULT '1',
+  `type` varchar(10) NOT NULL DEFAULT 'string',
+  `value` text,
+  `morevalue` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `varname` (`varname`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__config_group`;
+CREATE TABLE IF NOT EXISTS `#@__config_group` (
+  `id` smallint(6) NOT NULL,
+  `groupname` varchar(30) NOT NULL,
+  KEY `id` (`id`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__friendlink`;
+CREATE TABLE IF NOT EXISTS `#@__friendlink` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `title` char(50) DEFAULT NULL,
+  `content` varchar(255) DEFAULT NULL,
+  `pubdate` int(10) DEFAULT NULL,
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `gid` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `img` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `gid` (`gid`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__friendlink_group`;
+CREATE TABLE IF NOT EXISTS `#@__friendlink_group` (
+  `id` smallint(5) unsigned NOT NULL,
+  `name` char(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `name` (`name`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__member`;
+CREATE TABLE IF NOT EXISTS `#@__member` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` char(16) NOT NULL,
+  `password` char(32) NOT NULL,
+  `email` char(30) NOT NULL,
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `activekey` char(32) NOT NULL,
+  `logintime` int(10) unsigned NOT NULL,
+  `regtime` int(10) unsigned NOT NULL,
+  `loginip` char(15) NOT NULL,
+  `money` int(10) unsigned NOT NULL DEFAULT '0',
+  `rankid` int(10) unsigned NOT NULL DEFAULT '1',
+  `sex` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `province` char(10) NOT NULL,
+  `city` char(10) NOT NULL,
+  `qq` char(15) NOT NULL,
+  `birthday` char(10) NOT NULL,
+  `avtar` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  KEY `rankid` (`rankid`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__member_msg`;
+CREATE TABLE IF NOT EXISTS `#@__member_msg` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `fromid` mediumint(8) unsigned NOT NULL,
+  `toid` mediumint(8) unsigned NOT NULL,
+  `fromstatus` tinyint(1) NOT NULL DEFAULT '0',
+  `tostatus` tinyint(1) NOT NULL DEFAULT '0',
+  `msg` text NOT NULL,
+  `title` char(60) NOT NULL,
+  `pubdate` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fromid` (`fromid`,`toid`,`fromstatus`,`tostatus`),
+  KEY `pubdate` (`pubdate`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__member_rank`;
+CREATE TABLE IF NOT EXISTS `#@__member_rank` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `rankname` varchar(30) NOT NULL,
+  `rankmoney` int(10) unsigned NOT NULL,
+  `rankimg` varchar(30) NOT NULL,
+  `groupid` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  KEY `groupid` (`groupid`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__plugin`;
+CREATE TABLE IF NOT EXISTS `#@__plugin` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `title` char(20) NOT NULL,
+  `description` text NOT NULL,
+  `author` char(20) NOT NULL,
+  `copyright` char(50) NOT NULL,
+  `pubdate` int(10) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `status` (`status`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__special`;
+CREATE TABLE IF NOT EXISTS `#@__special` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `title` char(30) NOT NULL,
+  `seotitle` varchar(30) NOT NULL,
+  `keywords` char(30) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `pubdate` int(10) unsigned NOT NULL,
+  `tempindex` char(50) NOT NULL,
+  `waptempindex` char(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__vote`;
+CREATE TABLE IF NOT EXISTS `#@__vote` (
+  `id` mediumint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(80) NOT NULL,
+  `content` text NOT NULL,
+  `status` tinyint(1) unsigned NOT NULL,
+  `type` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `starttime` int(10) unsigned NOT NULL,
+  `overtime` int(10) unsigned NOT NULL,
+  `rank` tinyint(2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM;
+
+DROP TABLE IF EXISTS `#@__tags`;
+CREATE TABLE IF NOT EXISTS `#@__tags` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `keyword` varchar(30) NOT NULL,
+  `searchnum` int(10) unsigned NOT NULL,
+  `pubdate` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `keyword` (`keyword`),
+  KEY `searchnum` (`searchnum`),
+  KEY `pubdate` (`pubdate`)
+) ENGINE=MyISAM;

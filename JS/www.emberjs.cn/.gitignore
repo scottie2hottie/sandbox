@@ -1,0 +1,11 @@
+tmp
+.DS_Store
+bin/
+.bundle/
+output
+.sass-cache
+build/
+.mm-pid-*
+/b
+*.swp
+.rvmrc

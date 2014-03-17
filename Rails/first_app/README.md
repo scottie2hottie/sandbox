@@ -1,0 +1,1 @@
+My so called first app following Michael Hartl's rails tutorial pdf Chinese version.

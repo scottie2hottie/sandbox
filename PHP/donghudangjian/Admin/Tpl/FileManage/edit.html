@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>网站后台管理</title>
+<link href="./Public/Admin/images/Admin_css.css" type="text/css" rel="stylesheet">
+<link rel="shortcut icon" href="./Public/Admin/images/myfav.ico" type="image/x-icon" />
+<import file= "Admin.js.admin,Admin.js.Jquery"/>
+</head>
+<body>
+<table width="95%" border="0"  align="center" cellpadding="3" cellspacing="2" bgcolor="#FFFFFF" class="admintable">
+<form action="{:U('FileManage/doedit')}"   name="myform" method="post" id="myform" enctype="multipart/form-data">
+<tr> 
+    <td colspan="2" align="left" class="admintitle">文件编辑</td></tr>
+<tr> 
+<td width="20%" class="b1_1">当前文件位置</td>
+<td class="b1_1"><input type='text' name='filename' value='<?php echo String::setCharset($filename);?>' size='100'/></td>
+<input type='hidden' name='from' value="{$_SERVER['HTTP_REFERER']}"/>
+</tr>
+
+<tr>
+  <td valign="top" class="b1_1"><p>内容</p>
+  <td class="b1_1"><textarea id="Content" name="content" style="width:700px;height:300px;">{$content}
+</textarea>
+</td>
+</tr>
+<td width="20%" class="b1_1"></td>
+<td class="b1_1"><input name="submit" type="submit" class="bnt" value="保 存">&nbsp;&nbsp;<input type="button" onclick="history.go(-1);" class="bnt" value="返 回"></td>
+</tr>
+</form>
+</table>
+<div style="text-align:center;margin:10px;">
+<hr>
+<include file="Index:copy" /> 
+</div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+<?php
+return array ( 0 => 'id', 1 => 'land_id', 2 => 'location', 3 => 'jiaoyi_method', 4 => 'jiaoyi_time', 5 => 'land_yongtu', 6 => 'land_area', 7 => 'guihua_zhibiao', 8 => 'begin_price', 9 => 'deal_unit_price', 10 => 'deal_total_price', 11 => 'bid_owner', 12 => 'remarks', '_autoinc' => true, '_pk' => 'id', ); ?>

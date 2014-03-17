@@ -1,0 +1,23 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<%= @show_visit_times %>
+<h1>你的产品列表：</h1>
+
+<% @products.each do |product|  %>
+  <div class="entry">
+    <!-- <%= image_tag(product.image_url) %> -->
+    <%= link_to image_tag(product.image_url, :class => 'list image'), 
+                line_items_path(:product_id => product),
+                html_options = {:method => :post}
+     %>
+    <h3>
+      <%= product.title %>
+    </h3>
+    <%= sanitize(product.description) %>
+    <div class="price_line">
+      <span class="price"><%= number_to_currency(product.price) %></span>
+      <%= button_to 'Add to cart', line_items_path(:product_id => product) %>
+    </div>
+  </div>
+<% end %>

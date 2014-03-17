@@ -1,0 +1,10 @@
+<% if line_item == @current_item %>
+  <tr id="current_item">
+<% else %>
+  <tr>
+<% end %>
+  <td><%= line_item.quantity %>&times;</td>
+  <td><%= line_item.product.title %></td>
+  <td class="line_item_price"><%= number_to_currency(line_item.total_price) %></td>
+  <td><%= button_to "删除", line_item, method: :delete, data: {confirm: "确定从购物车中删除此商品？"} %></td>
+</tr>

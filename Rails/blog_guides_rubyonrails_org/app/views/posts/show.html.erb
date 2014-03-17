@@ -1,0 +1,15 @@
+<h1> Post: </h1>
+<%= div_for(@post) do %>
+  <strong>Title: </strong><br>
+  <%= @post.title %><br><br>
+  <strong>Content: </strong><br>
+  <p><%= @post.content %></p>
+<% end %>
+<hr>
+<%= render @post.comments %>
+<hr>
+<h3>Add a comment:</h3>
+<%= render "comments/form" %>
+
+<%= link_to "Go back", posts_path %>
+<%= link_to "Edit", edit_post_path(@post) %>

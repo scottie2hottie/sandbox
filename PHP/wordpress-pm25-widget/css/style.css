@@ -1,0 +1,123 @@
+/*   
+  Name:       China AQI & PM2.5 Chrome extension
+  Desciption: China AQI & PM2.5 Chrome extension is a real time Chinese city AQI & PM2.5 index chrome extension.
+  Author:     Anson Ho(gz.anson@gmail.com)
+  Url:        http://pm25.in
+  Team:       http://bestapp.us
+  Version:    1.0
+*/
+/* Copyright 2013 BestApp.us. All Rights Reserved. */
+#dym #main {
+	padding:0px; width:240px;
+	border-color: #2fd5ff;border-style:solid;border-width:2px;
+	background:#2fb7d9; 
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius:15px;
+  color: black;
+}
+
+#options_main {
+	padding/*:0px; 
+  width:680px;
+	border-color: #2fd5ff;border-style:solid;border-width:3px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius:15px;
+	margin: auto;
+	padding: 20p*/x;
+}
+
+#status {
+	/*background: #929292;*/
+}
+#dym body {
+	background-color:#f7f7eb;
+  color: #000;
+}
+
+#dym #cityName {
+	margin: 15px;font-family: sans-serif;color: #fff;font-size: 25px;text-align: left;float: left;
+}
+
+#dym #date {
+	margin: 20px 20px 20px 20px;
+  float: right;
+  font-size: 14px;
+}
+
+#dym #aqiName {
+	margin-left: 15px;font-size: 12px; clear: both;
+}
+
+#dym #aqi {
+	text-align: center;font-size: 125px;margin: 0px;
+}
+
+#dym #level {
+	text-align:center;color: #fff;font-size: 18px;
+}
+
+#dym .msg {
+	text-align:left;color: #fff;font-size: 12px;font-weight:lighter;margin: 10px;
+}
+
+#dym #bottom {
+	border-top: solid;border-bottom: solid;border-color: #ace2f0;border-width: 2px;margin: 5px; padding: 5px;
+}
+
+#dym #pm25_title {
+	font-size: 12px;
+}
+
+#dym #pm25_data {
+	font-size: 30px;border-color: #fff;height:36px;line-height:36px
+}
+
+#dym #checkPoint {
+	color: #fff; 
+	margin:10px 20px 10px 20px;
+	font-size: 12px;
+	background: url(../img/more.png) right no-repeat;
+	height: 26px;
+	height:28px;
+	line-height:28px;
+	cursor: pointer;
+}
+
+#dym .green {
+	color: green;
+}
+#dym .yellow {
+	color:yellow;
+}
+#dym .orange {
+	color:orange;
+}
+#dym .red {
+	color:red;
+}
+#dym .purple {
+	color:purple;
+}
+#dym .maroon {
+	color:maroon;
+}
+
+#dym table {
+	text-align: center;width: 90%; margin: auto;color: #fff;
+}
+
+#dym table td {
+  text-align: center;
+}
+
+#dym .show {
+	display: block;
+	/*visibility: visible;*/
+}
+
+#dym .hide {
+	display: none;
+	/*visibility: hidden;*/
+}

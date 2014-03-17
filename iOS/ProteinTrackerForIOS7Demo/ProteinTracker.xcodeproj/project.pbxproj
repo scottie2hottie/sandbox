@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF1DB6D918A1159D006D24EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1DB6D818A1159D006D24EA /* Foundation.framework */; };
+		EF1DB6DB18A1159D006D24EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1DB6DA18A1159D006D24EA /* CoreGraphics.framework */; };
+		EF1DB6DD18A1159D006D24EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1DB6DC18A1159D006D24EA /* UIKit.framework */; };
+		EF1DB6E318A1159D006D24EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF1DB6E118A1159D006D24EA /* InfoPlist.strings */; };
+		EF1DB6E518A1159D006D24EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1DB6E418A1159D006D24EA /* main.m */; };
+		EF1DB6E918A1159D006D24EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1DB6E818A1159D006D24EA /* AppDelegate.m */; };
+		EF1DB6EF18A1159D006D24EA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1DB6EE18A1159D006D24EA /* MainViewController.m */; };
+		EF1DB6F118A1159D006D24EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1DB6F018A1159D006D24EA /* Images.xcassets */; };
+		EF1DB6F818A1159D006D24EA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1DB6F718A1159D006D24EA /* XCTest.framework */; };
+		EF1DB6F918A1159D006D24EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1DB6D818A1159D006D24EA /* Foundation.framework */; };
+		EF1DB6FA18A1159D006D24EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1DB6DC18A1159D006D24EA /* UIKit.framework */; };
+		EF1DB70218A1159D006D24EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF1DB70018A1159D006D24EA /* InfoPlist.strings */; };
+		EF1DB70418A1159D006D24EA /* ProteinTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1DB70318A1159D006D24EA /* ProteinTrackerTests.m */; };
+		EF1DB70F18A11A5E006D24EA /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1DB70E18A11A5E006D24EA /* HistoryViewController.m */; };
+		EF1DB71118A11D04006D24EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1DB71018A11D04006D24EA /* Main.storyboard */; };
+		EFC488FF18A1D7A200CF06F3 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EFC488FE18A1D7A200CF06F3 /* Settings.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF1DB6FB18A1159D006D24EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF1DB6CD18A1159D006D24EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF1DB6D418A1159D006D24EA;
+			remoteInfo = ProteinTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF1DB6D518A1159D006D24EA /* ProteinTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProteinTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1DB6D818A1159D006D24EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EF1DB6DA18A1159D006D24EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EF1DB6DC18A1159D006D24EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EF1DB6E018A1159D006D24EA /* ProteinTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProteinTracker-Info.plist"; sourceTree = "<group>"; };
+		EF1DB6E218A1159D006D24EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EF1DB6E418A1159D006D24EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF1DB6E618A1159D006D24EA /* ProteinTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProteinTracker-Prefix.pch"; sourceTree = "<group>"; };
+		EF1DB6E718A1159D006D24EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF1DB6E818A1159D006D24EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF1DB6ED18A1159D006D24EA /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EF1DB6EE18A1159D006D24EA /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EF1DB6F018A1159D006D24EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EF1DB6F618A1159D006D24EA /* ProteinTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProteinTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1DB6F718A1159D006D24EA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EF1DB6FF18A1159D006D24EA /* ProteinTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProteinTrackerTests-Info.plist"; sourceTree = "<group>"; };
+		EF1DB70118A1159D006D24EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EF1DB70318A1159D006D24EA /* ProteinTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProteinTrackerTests.m; sourceTree = "<group>"; };
+		EF1DB70D18A11A5E006D24EA /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		EF1DB70E18A11A5E006D24EA /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		EF1DB71018A11D04006D24EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EFC488FE18A1D7A200CF06F3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF1DB6D218A1159D006D24EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1DB6DB18A1159D006D24EA /* CoreGraphics.framework in Frameworks */,
+				EF1DB6DD18A1159D006D24EA /* UIKit.framework in Frameworks */,
+				EF1DB6D918A1159D006D24EA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF1DB6F318A1159D006D24EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1DB6F818A1159D006D24EA /* XCTest.framework in Frameworks */,
+				EF1DB6FA18A1159D006D24EA /* UIKit.framework in Frameworks */,
+				EF1DB6F918A1159D006D24EA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF1DB6CC18A1159D006D24EA = {
+			isa = PBXGroup;
+			children = (
+				EF1DB6DE18A1159D006D24EA /* ProteinTracker */,
+				EF1DB6FD18A1159D006D24EA /* ProteinTrackerTests */,
+				EF1DB6D718A1159D006D24EA /* Frameworks */,
+				EF1DB6D618A1159D006D24EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF1DB6D618A1159D006D24EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF1DB6D518A1159D006D24EA /* ProteinTracker.app */,
+				EF1DB6F618A1159D006D24EA /* ProteinTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF1DB6D718A1159D006D24EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF1DB6D818A1159D006D24EA /* Foundation.framework */,
+				EF1DB6DA18A1159D006D24EA /* CoreGraphics.framework */,
+				EF1DB6DC18A1159D006D24EA /* UIKit.framework */,
+				EF1DB6F718A1159D006D24EA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF1DB6DE18A1159D006D24EA /* ProteinTracker */ = {
+			isa = PBXGroup;
+			children = (
+				EF1DB6E718A1159D006D24EA /* AppDelegate.h */,
+				EF1DB6E818A1159D006D24EA /* AppDelegate.m */,
+				EF1DB6ED18A1159D006D24EA /* MainViewController.h */,
+				EF1DB6EE18A1159D006D24EA /* MainViewController.m */,
+				EF1DB71018A11D04006D24EA /* Main.storyboard */,
+				EF1DB70D18A11A5E006D24EA /* HistoryViewController.h */,
+				EF1DB70E18A11A5E006D24EA /* HistoryViewController.m */,
+				EF1DB6F018A1159D006D24EA /* Images.xcassets */,
+				EF1DB6DF18A1159D006D24EA /* Supporting Files */,
+				EFC488FE18A1D7A200CF06F3 /* Settings.bundle */,
+			);
+			path = ProteinTracker;
+			sourceTree = "<group>";
+		};
+		EF1DB6DF18A1159D006D24EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF1DB6E018A1159D006D24EA /* ProteinTracker-Info.plist */,
+				EF1DB6E118A1159D006D24EA /* InfoPlist.strings */,
+				EF1DB6E418A1159D006D24EA /* main.m */,
+				EF1DB6E618A1159D006D24EA /* ProteinTracker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF1DB6FD18A1159D006D24EA /* ProteinTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF1DB70318A1159D006D24EA /* ProteinTrackerTests.m */,
+				EF1DB6FE18A1159D006D24EA /* Supporting Files */,
+			);
+			path = ProteinTrackerTests;
+			sourceTree = "<group>";
+		};
+		EF1DB6FE18A1159D006D24EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF1DB6FF18A1159D006D24EA /* ProteinTrackerTests-Info.plist */,
+				EF1DB70018A1159D006D24EA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF1DB6D418A1159D006D24EA /* ProteinTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF1DB70718A1159D006D24EA /* Build configuration list for PBXNativeTarget "ProteinTracker" */;
+			buildPhases = (
+				EF1DB6D118A1159D006D24EA /* Sources */,
+				EF1DB6D218A1159D006D24EA /* Frameworks */,
+				EF1DB6D318A1159D006D24EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProteinTracker;
+			productName = ProteinTracker;
+			productReference = EF1DB6D518A1159D006D24EA /* ProteinTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF1DB6F518A1159D006D24EA /* ProteinTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF1DB70A18A1159D006D24EA /* Build configuration list for PBXNativeTarget "ProteinTrackerTests" */;
+			buildPhases = (
+				EF1DB6F218A1159D006D24EA /* Sources */,
+				EF1DB6F318A1159D006D24EA /* Frameworks */,
+				EF1DB6F418A1159D006D24EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF1DB6FC18A1159D006D24EA /* PBXTargetDependency */,
+			);
+			name = ProteinTrackerTests;
+			productName = ProteinTrackerTests;
+			productReference = EF1DB6F618A1159D006D24EA /* ProteinTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF1DB6CD18A1159D006D24EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Deng Yanming";
+				TargetAttributes = {
+					EF1DB6F518A1159D006D24EA = {
+						TestTargetID = EF1DB6D418A1159D006D24EA;
+					};
+				};
+			};
+			buildConfigurationList = EF1DB6D018A1159D006D24EA /* Build configuration list for PBXProject "ProteinTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF1DB6CC18A1159D006D24EA;
+			productRefGroup = EF1DB6D618A1159D006D24EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF1DB6D418A1159D006D24EA /* ProteinTracker */,
+				EF1DB6F518A1159D006D24EA /* ProteinTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF1DB6D318A1159D006D24EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC488FF18A1D7A200CF06F3 /* Settings.bundle in Resources */,
+				EF1DB71118A11D04006D24EA /* Main.storyboard in Resources */,
+				EF1DB6F118A1159D006D24EA /* Images.xcassets in Resources */,
+				EF1DB6E318A1159D006D24EA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF1DB6F418A1159D006D24EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1DB70218A1159D006D24EA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF1DB6D118A1159D006D24EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1DB6EF18A1159D006D24EA /* MainViewController.m in Sources */,
+				EF1DB6E918A1159D006D24EA /* AppDelegate.m in Sources */,
+				EF1DB6E518A1159D006D24EA /* main.m in Sources */,
+				EF1DB70F18A11A5E006D24EA /* HistoryViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF1DB6F218A1159D006D24EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1DB70418A1159D006D24EA /* ProteinTrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF1DB6FC18A1159D006D24EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF1DB6D418A1159D006D24EA /* ProteinTracker */;
+			targetProxy = EF1DB6FB18A1159D006D24EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF1DB6E118A1159D006D24EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF1DB6E218A1159D006D24EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EF1DB70018A1159D006D24EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF1DB70118A1159D006D24EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF1DB70518A1159D006D24EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF1DB70618A1159D006D24EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF1DB70818A1159D006D24EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProteinTracker/ProteinTracker-Prefix.pch";
+				INFOPLIST_FILE = "ProteinTracker/ProteinTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EF1DB70918A1159D006D24EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProteinTracker/ProteinTracker-Prefix.pch";
+				INFOPLIST_FILE = "ProteinTracker/ProteinTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EF1DB70B18A1159D006D24EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ProteinTracker.app/ProteinTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProteinTracker/ProteinTracker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ProteinTrackerTests/ProteinTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EF1DB70C18A1159D006D24EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ProteinTracker.app/ProteinTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ProteinTracker/ProteinTracker-Prefix.pch";
+				INFOPLIST_FILE = "ProteinTrackerTests/ProteinTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF1DB6D018A1159D006D24EA /* Build configuration list for PBXProject "ProteinTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF1DB70518A1159D006D24EA /* Debug */,
+				EF1DB70618A1159D006D24EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF1DB70718A1159D006D24EA /* Build configuration list for PBXNativeTarget "ProteinTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF1DB70818A1159D006D24EA /* Debug */,
+				EF1DB70918A1159D006D24EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF1DB70A18A1159D006D24EA /* Build configuration list for PBXNativeTarget "ProteinTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF1DB70B18A1159D006D24EA /* Debug */,
+				EF1DB70C18A1159D006D24EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF1DB6CD18A1159D006D24EA /* Project object */;
+}

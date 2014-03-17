@@ -1,0 +1,1 @@
+根据 railscasts china 做的 blog 练习

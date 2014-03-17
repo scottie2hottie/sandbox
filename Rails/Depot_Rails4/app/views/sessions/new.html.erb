@@ -1,0 +1,22 @@
+<div class="depot_form">
+  <% if flash[:alert] %>
+    <p id="notice"><%= flash[:alert] %></p>
+  <% end %>
+  <%= form_tag do %>
+    <fieldset>
+      <legend>请登录</legend>
+      <div>
+        <%= label_tag :name, '用户名:' %>
+        <%= text_field_tag :name, params[:name] %>
+      </div>
+      <div>
+        <%= label_tag :password, '密码:' %>
+        <%= password_field_tag :password, params[:password] %>
+      </div>
+      <div>
+        <label for="#"></label>
+        <%= submit_tag "登入" %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>

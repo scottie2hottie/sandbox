@@ -1,0 +1,1 @@
+<?php	return array ( 'themedirname' => 'default', 'name' => '默认WAP主题', 'author' => '将军', 'demo' => 'http://www.waikucms.com', 'company' => '歪酷官方', 'wap_name' => '手机歪酷网', );?>

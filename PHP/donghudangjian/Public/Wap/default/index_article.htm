@@ -1,0 +1,69 @@
+<html>
+<!--head-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="viewport" content="width=device-width"/>
+<meta name="MobileOptimized" content="320"/>
+<meta name="copyright" content="歪酷CMS" />
+<meta name="author" content="歪酷CMS 将军" />
+<link rel="apple-touch-icon-precomposed" href="__THEME__/images/logo-icon.png" >
+<title><wk:field name="typename"/>-<wk:tplvar name='wap_name'/></title>
+<link rel="stylesheet" type="text/css" href="__THEME__/css/chupingyangshi.css" media="all"></head>
+<!--head-->
+<body class="sub">
+
+	<header class="h">
+		<h2 class="cTtl"><wk:field name="typename"/></h2>
+		<a href="__ROOT__" class="reHome" style="padding-top:15px;">
+			<i class="i iF iF4"></i>
+		</a>
+	</header>
+
+	<!--导航-->
+	
+<!--顶部导航栏-->
+<nav class="site all">
+<div>
+<a href="__ROOT__">首页</a>
+<wk:arctype type='top'>
+<a href="<field name='typeurl'/>"><field name="typename"/></a>
+</wk:arctype></div>
+</nav>
+
+	<!--导航-->
+
+<wk:arctype type='son' vo='vo'>
+<section class="cnl">
+<h3 class="h ht2">
+			<aside>
+				<menu class="sep">			
+				<li><a href="<field name='typeurl' fromvo='vo'/>">更多</a></li>
+				</menu>
+			</aside>
+			<em><a href="<field name='typeurl' fromvo='vo'/>"><field name='typename' fromvo='vo'/></a></em>
+		</h3>
+<section class="ls">
+<div class="it">
+				<section class="pl pl_c2">
+				<wk:arclist typeid='~typeid~' fromvo='vo' limit='0,2'>
+                 <a href="<field name='arcurl'/>" class="h4">
+		<i class="img"><img src="<field name='litpic' function="empty(@me)?'__PUBLIC__/Admin/images/nopic.png':@me"/>"  width="146" height="124" /></i>
+						<p><field name='title'/></p>
+					</a>
+					</wk:arclist>
+				</section>
+			</div>
+<wk:arclist typeid='~typeid~' fromvo='vo' limit='2,10'>	
+<div class="it">
+<div class="h4WP">
+<a href="<field name='arcurl'/>" class="h4" ><field name='title'/></a>
+</div>
+</div>
+</wk:arclist>
+</section>
+</section>
+</wk:arctype>
+<wk:include filename='footer.htm'/>
+</body>
+</html>

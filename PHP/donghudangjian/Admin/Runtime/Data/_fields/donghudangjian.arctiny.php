@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'id', 1 => 'typeid', 2 => 'modelid', 3 => 'senddate', 4 => 'mid', '_autoinc' => true, '_pk' => 'id', '_type' => array ( 'id' => 'mediumint(8) unsigned', 'typeid' => 'smallint(5) unsigned', 'modelid' => 'smallint(5)', 'senddate' => 'int(10) unsigned', 'mid' => 'mediumint(8) unsigned', ), );?>

@@ -1,0 +1,30 @@
+<% partial_for :head, 'blog/head' %>
+<% partial_for :sidebar, 'blog/sidebar' %>
+
+<% wrap_layout :layout do %>
+  <article class="blog-post">
+    <h1><%= current_article.title %></h1>
+    <% if current_page.data.author %>
+      <h3 class="blog-post-author">作者：<%= current_page.data.author %></h3>
+    <% end %>
+
+    <%= yield %>
+
+    <hr>
+
+    <div id="disqus_thread"></div> 
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'emberjs-cn'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript><a href="http://disqus.com/?ref_noscript">基于Disqus的评论需要启用Javascript</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">博客评论基于<span class="logo-disqus">Disqus</span></a>
+  </article>
+<% end %>

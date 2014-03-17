@@ -1,0 +1,25 @@
+body {
+  background: #333;
+  color: white;
+  width: 500px;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+  font-family: arial, sans-serif;
+}
+
+.message {
+  color: red;
+  font-style: italic;
+}
+
+input[type=text] {
+  width: 85%;
+  height: 40px;
+  color: #666;
+  font-size: 25px;
+}
+
+a {
+  color: #999;
+}

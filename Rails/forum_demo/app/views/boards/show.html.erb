@@ -1,0 +1,47 @@
+
+<p>
+  <b>板块名：</b>
+  <%= @board.name %>
+</p>
+<h1>帖子列表：(共有<%= @board.posts.size %>个帖子)</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>标题</th>
+    <th>内容</th>
+    <th>发表日期</th>
+    <th>更新日期</th>
+  </tr>
+  <% @posts.each do |post|  %>
+    <tr>
+      <td><%= post.id %></td>
+      <td><%= post.title %></td>
+      <td><%= post.content %></td>
+      <td><%= l(post.created_at, format: :short) %></td>
+      <td><%= l(post.updated_at, format: :short) %></td>
+      <td></td>
+      <td><%= link_to "Show", board_post_path(@board, post) %></td>
+      <!-- 如果是帖子所有者 -->
+      <% if current_user && current_user == post.user && !current_user.is_admin?%>
+        <td><%= link_to "Edit", edit_board_post_path(@board, post) %></td>
+        <td><%= link_to "Delete", board_post_path(@board, post), confirm: "Are you sure you want to delte this post?", method: :delete %></td>
+      <% end %>
+
+      <!-- 如果是管理员 -->
+      <% if current_user && current_user.is_admin? %>
+        <td><%= link_to "Admin-Post-Edit", edit_admin_board_post_path(@board, post) %></td>
+        <td><%= link_to "Admin-Post-Delete", admin_board_post_path(@board, post), confirm: "Are you sure you want to delte this post?", method: :delete %></td>
+      <% end %>
+
+    </tr>
+  <% end %>
+</table>
+
+<%= will_paginate(@posts) %>
+<br/>
+
+<%= link_to "发布新帖", new_board_post_path(@board) %>
+<% if current_user && current_user.is_admin? %>
+  <%= link_to 'Admin-Board-Edit', edit_admin_board_path(@board) %> |
+<% end %>
+<%= link_to 'Back', boards_path %>

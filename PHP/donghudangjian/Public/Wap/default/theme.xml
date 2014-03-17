@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+<basic>
+<field tag="input" name="name" alt="主题名称" value="默认WAP主题" extend="type='text' style='width:200px' readonly"/>
+<field tag="input" name="author" alt="主题作者" value="将军" extend="type='text' style='width:200px' readonly"/>
+<field tag="input" name="demo" alt="演示地址" value="http://www.waikucms.com" extend="type='text' style='width:200px' readonly"/>
+<field tag="input" name="company" alt="开发商" value="歪酷官方" extend="type='text' style='width:200px' readonly"/>
+</basic>
+<advance>
+<field tag="input" name="wap_name" alt="网站名称" value="手机歪酷网" extend="type='text' style='width:200px'"/>
+</advance>
+<extend>
+</extend>
+</theme>
